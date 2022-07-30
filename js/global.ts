@@ -12,13 +12,21 @@ const input_excludeSimilar: string = "exclSimilar";
 const div_resultWrapper: string = "resultsDiv";
 const input_resultsText: string = "resultsText";
 const button_copy: string = "copyButton";
+const button_dark: string = "darkModeButton";
+const class_dark: string = "dark-mode";
 var style_visible = "visible";
+var dark_mode: boolean = false;
 
 function init(): void {
     let main_form = <HTMLFormElement>document.getElementById(form_main);
     if (main_form != null) {
         main_form.onsubmit = execute;
     }
+    if (window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        dark_mode = true;
+    }
+    updateColorScheme();
 }
 
 function execute(): boolean {
@@ -53,6 +61,24 @@ function copy() {
     let copyButton = <HTMLButtonElement>document.getElementById(button_copy);
     copyButton.textContent = "Copied";
     setTimeout(function () { copyButton.textContent = "Copy"; }, 1000);
+}
+
+function switchColorScheme(): boolean {
+    dark_mode = !dark_mode;
+    updateColorScheme();
+    return false;
+}
+
+function updateColorScheme() {
+    let darkModeButton = <HTMLButtonElement>document.getElementById(button_dark);
+    if (dark_mode) {
+        document.documentElement.classList.add(class_dark);
+        darkModeButton.textContent = "Light Mode";
+    }
+    else {
+        document.documentElement.classList.remove(class_dark);
+        darkModeButton.textContent = "Dark Mode";
+    }
 }
 
 window.onload = init;
