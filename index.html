@@ -5,8 +5,8 @@
     <title>Random Password Generator</title>
     <script src="js/global.js"></script>
     <script src="js/ezpwgen.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css " integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u
+    " crossorigin="anonymous">
     <link id="favicon" rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -45,8 +45,7 @@
             }
         }
 
-        .dark-mode,
-        .dark-mode body {
+        .dark-mode, .dark-mode body {
             background-color: #15202B;
             color: #e4e6eb;
         }
@@ -61,10 +60,6 @@
 
         .dark-mode svg {
             filter: invert(100%) hue-rotate(180deg);
-        }
-
-        .checkbox {
-            padding-top: 0.5em;
         }
     </style>
 </head>
@@ -81,230 +76,213 @@
                 d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
                 fill="currentColor" class="octo-body"></path>
         </svg></a>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <h1 class="text-center">Random Password Generator</h1>
-                <p class="text-center">
-                    A simple TypeScript random password generator. Since all of the processing happens
-                    in your browser, no sensitive information is transmitted over the wire.
-                </p>
-            </div>
-            <div class="col-2"></div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1 class="text-center">Random Password Generator</h1>
+            <p class="text-center">
+                A simple TypeScript random password generator. Since all of the processing happens
+                in your browser, no sensitive information is transmitted over the wire.
+            </p>
+            <form id="mainForm" class="form-horizontal">
+                <div class="form-group">
+                    <label for="pwLength" class="col-sm-4 control-label">Password Length</label>
+                    <div class="col-sm-3">
+                        <select class="form-control" id="pwLength" required>
+                            <optgroup label="Weak">
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </optgroup>
+                            <optgroup label="Strong">
+                                <option value="16" selected>16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                <option value="32">32</option>
+                                <option value="33">33</option>
+                                <option value="34">34</option>
+                                <option value="35">35</option>
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                                <option value="46">46</option>
+                                <option value="47">47</option>
+                                <option value="48">48</option>
+                                <option value="49">49</option>
+                                <option value="50">50</option>
+                                <option value="51">51</option>
+                                <option value="52">52</option>
+                                <option value="53">53</option>
+                                <option value="54">54</option>
+                                <option value="55">55</option>
+                                <option value="56">56</option>
+                                <option value="57">57</option>
+                                <option value="58">58</option>
+                                <option value="59">59</option>
+                                <option value="60">60</option>
+                                <option value="61">61</option>
+                                <option value="62">62</option>
+                                <option value="63">63</option>
+                                <option value="64">64</option>
+                                <option value="65">65</option>
+                                <option value="66">66</option>
+                                <option value="67">67</option>
+                                <option value="68">68</option>
+                                <option value="69">69</option>
+                                <option value="70">70</option>
+                                <option value="71">71</option>
+                                <option value="72">72</option>
+                                <option value="73">73</option>
+                                <option value="74">74</option>
+                                <option value="75">75</option>
+                                <option value="76">76</option>
+                                <option value="77">77</option>
+                                <option value="78">78</option>
+                                <option value="79">79</option>
+                                <option value="80">80</option>
+                                <option value="81">81</option>
+                                <option value="82">82</option>
+                                <option value="83">83</option>
+                                <option value="84">84</option>
+                                <option value="85">85</option>
+                                <option value="86">86</option>
+                                <option value="87">87</option>
+                                <option value="88">88</option>
+                                <option value="89">89</option>
+                                <option value="90">90</option>
+                                <option value="91">91</option>
+                                <option value="92">92</option>
+                                <option value="93">93</option>
+                                <option value="94">94</option>
+                                <option value="95">95</option>
+                                <option value="96">96</option>
+                                <option value="97">97</option>
+                                <option value="98">98</option>
+                                <option value="99">99</option>
+                                <option value="100">100</option>
+                                <option value="101">101</option>
+                                <option value="102">102</option>
+                                <option value="103">103</option>
+                                <option value="104">104</option>
+                                <option value="105">105</option>
+                                <option value="106">106</option>
+                                <option value="107">107</option>
+                                <option value="108">108</option>
+                                <option value="109">109</option>
+                                <option value="110">110</option>
+                                <option value="111">111</option>
+                                <option value="112">112</option>
+                                <option value="113">113</option>
+                                <option value="114">114</option>
+                                <option value="115">115</option>
+                                <option value="116">116</option>
+                                <option value="117">117</option>
+                                <option value="118">118</option>
+                                <option value="119">119</option>
+                                <option value="120">120</option>
+                                <option value="121">121</option>
+                                <option value="122">122</option>
+                                <option value="123">123</option>
+                                <option value="124">124</option>
+                                <option value="125">125</option>
+                                <option value="126">126</option>
+                                <option value="127">127</option>
+                                <option value="128">128</option>
+                            </optgroup>
+                            <optgroup label="Unbelievable">
+                                <option value="256">256</option>
+                                <option value="512">512</option>
+                                <option value="1024">1024</option>
+                                <option value="2048">2048</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inclSymbols" class="col-sm-4 control-label">Include Symbols</label>
+                    <div class="checkbox col-sm-4" style="padding-left:3em;">
+                        <input type="checkbox" id="inclSymbols" checked />
+                        ( e.g. @#$% )
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inclNumbers" class="col-sm-4 control-label">Include Numbers</label>
+                    <div class="checkbox col-sm-4" style="padding-left:3em;">
+                        <input type="checkbox" id="inclNumbers" checked />
+                        ( e.g. 123456 )
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inclLower" class="col-sm-4 control-label">Include Lowercase</label>
+                    <div class="checkbox col-sm-4" style="padding-left:3em;">
+                        <input type="checkbox" id="inclLower" checked />
+                        ( e.g. abcdefgh )
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inclUpper" class="col-sm-4 control-label">Include Uppercase</label>
+                    <div class="checkbox col-sm-4" style="padding-left:3em;">
+                        <input type="checkbox" id="inclUpper" checked />
+                        ( e.g. ABCDEFGH )
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inclAmbiguous" class="col-sm-4 control-label">Include Ambiguous</label>
+                    <div class="checkbox col-sm-4" style="padding-left:3em;">
+                        <input type="checkbox" id="inclAmbiguous" />
+                        ( e.g. [ ] ( ) / \ ' " ` ~ , ; : . &lt; &gt; )
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exclSimilar" class="col-sm-4 control-label">Exclude Similar</label>
+                    <div class="checkbox col-sm-4" style="padding-left:3em;">
+                        <input type="checkbox" id="exclSimilar" />
+                        ( e.g. i, l, 1, L, o, 0, O )
+                    </div>
+                </div>
+                <div class="col-sm-9 text-center">
+                    <button class="btn btn-success" type="submit">Generate</button>
+                    <button class="btn btn-default" type="reset">Reset</button>
+                    <button id="darkModeButton" type="button" class="btn btn-default" onclick="switchColorScheme()">Invert
+                        Colors</button>
+                </div>
         </div>
+        </form>
         <br />
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <form id="mainForm">
-                    <div class="row mb-3">
-                        <label for="pwLength" class="col-sm-5 col-form-label text-end">Password Length</label>
-                        <div class="col-sm-4">
-                            <select class="form-select" id="pwLength" required>
-                                <optgroup label="Weak">
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                </optgroup>
-                                <optgroup label="Strong">
-                                    <option value="16" selected>16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                    <option value="32">32</option>
-                                    <option value="33">33</option>
-                                    <option value="34">34</option>
-                                    <option value="35">35</option>
-                                    <option value="36">36</option>
-                                    <option value="37">37</option>
-                                    <option value="38">38</option>
-                                    <option value="39">39</option>
-                                    <option value="40">40</option>
-                                    <option value="41">41</option>
-                                    <option value="42">42</option>
-                                    <option value="43">43</option>
-                                    <option value="44">44</option>
-                                    <option value="45">45</option>
-                                    <option value="46">46</option>
-                                    <option value="47">47</option>
-                                    <option value="48">48</option>
-                                    <option value="49">49</option>
-                                    <option value="50">50</option>
-                                    <option value="51">51</option>
-                                    <option value="52">52</option>
-                                    <option value="53">53</option>
-                                    <option value="54">54</option>
-                                    <option value="55">55</option>
-                                    <option value="56">56</option>
-                                    <option value="57">57</option>
-                                    <option value="58">58</option>
-                                    <option value="59">59</option>
-                                    <option value="60">60</option>
-                                    <option value="61">61</option>
-                                    <option value="62">62</option>
-                                    <option value="63">63</option>
-                                    <option value="64">64</option>
-                                    <option value="65">65</option>
-                                    <option value="66">66</option>
-                                    <option value="67">67</option>
-                                    <option value="68">68</option>
-                                    <option value="69">69</option>
-                                    <option value="70">70</option>
-                                    <option value="71">71</option>
-                                    <option value="72">72</option>
-                                    <option value="73">73</option>
-                                    <option value="74">74</option>
-                                    <option value="75">75</option>
-                                    <option value="76">76</option>
-                                    <option value="77">77</option>
-                                    <option value="78">78</option>
-                                    <option value="79">79</option>
-                                    <option value="80">80</option>
-                                    <option value="81">81</option>
-                                    <option value="82">82</option>
-                                    <option value="83">83</option>
-                                    <option value="84">84</option>
-                                    <option value="85">85</option>
-                                    <option value="86">86</option>
-                                    <option value="87">87</option>
-                                    <option value="88">88</option>
-                                    <option value="89">89</option>
-                                    <option value="90">90</option>
-                                    <option value="91">91</option>
-                                    <option value="92">92</option>
-                                    <option value="93">93</option>
-                                    <option value="94">94</option>
-                                    <option value="95">95</option>
-                                    <option value="96">96</option>
-                                    <option value="97">97</option>
-                                    <option value="98">98</option>
-                                    <option value="99">99</option>
-                                    <option value="100">100</option>
-                                    <option value="101">101</option>
-                                    <option value="102">102</option>
-                                    <option value="103">103</option>
-                                    <option value="104">104</option>
-                                    <option value="105">105</option>
-                                    <option value="106">106</option>
-                                    <option value="107">107</option>
-                                    <option value="108">108</option>
-                                    <option value="109">109</option>
-                                    <option value="110">110</option>
-                                    <option value="111">111</option>
-                                    <option value="112">112</option>
-                                    <option value="113">113</option>
-                                    <option value="114">114</option>
-                                    <option value="115">115</option>
-                                    <option value="116">116</option>
-                                    <option value="117">117</option>
-                                    <option value="118">118</option>
-                                    <option value="119">119</option>
-                                    <option value="120">120</option>
-                                    <option value="121">121</option>
-                                    <option value="122">122</option>
-                                    <option value="123">123</option>
-                                    <option value="124">124</option>
-                                    <option value="125">125</option>
-                                    <option value="126">126</option>
-                                    <option value="127">127</option>
-                                    <option value="128">128</option>
-                                </optgroup>
-                                <optgroup label="Unbelievable">
-                                    <option value="256">256</option>
-                                    <option value="512">512</option>
-                                    <option value="1024">1024</option>
-                                    <option value="2048">2048</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inclSymbols" class="col-sm-5 col-form-label text-end">Include Symbols</label>
-                        <div class="checkbox col-sm-4 text-start">
-                            <input type="checkbox" id="inclSymbols" class="form-check-input" checked />
-                            ( e.g. @#$% )
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inclNumbers" class="col-sm-5 col-form-label text-end">Include Numbers</label>
-                        <div class="checkbox col-sm-4 text-start">
-                            <input type="checkbox" id="inclNumbers" class="form-check-input" checked />
-                            ( e.g. 123456 )
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inclLower" class="col-sm-5 col-form-label text-end">Include Lowercase</label>
-                        <div class="checkbox col-sm-4 text-start">
-                            <input type="checkbox" id="inclLower" class="form-check-input" checked />
-                            ( e.g. abcdefgh )
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inclUpper" class="col-sm-5 col-form-label  text-end">Include Uppercase</label>
-                        <div class="checkbox col-sm-4 text-start">
-                            <input type="checkbox" id="inclUpper" class="form-check-input" checked />
-                            ( e.g. ABCDEFGH )
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inclAmbiguous" class="col-sm-5 col-form-label text-end">Include Ambiguous</label>
-                        <div class="checkbox col-sm-4 text-start">
-                            <input type="checkbox" id="inclAmbiguous" class="form-check-input" />
-                            ( e.g. [ ] ( ) / \ ' " ` ~ , ; : . &lt; &gt; )
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="exclSimilar" class="col-sm-5 col-form-label text-end">Exclude Similar</label>
-                        <div class="checkbox col-sm-4 text-start">
-                            <input type="checkbox" id="exclSimilar" class="form-check-input" />
-                            ( e.g. i, l, 1, L, o, 0, O )
-                        </div>
-                    </div>
-                    <br />
-                    <div class="text-center">
-                        <button class="btn btn-success" type="submit">Generate</button>
-                        <button class="btn btn-secondary" type="reset">Reset</button>
-                        <button id="darkModeButton" type="button" class="btn btn-dark"
-                            onclick="switchColorScheme()">Invert
-                            Colors</button>
-                    </div>
-                </form>
-                <br />
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-3"></div>
-            <div id="resultsDiv" class="col-6 text-center">
-                <br />
-                <br />
-                Generated Password:
-                <input type="text" id="resultsText" placeholder="Click Generate button" disabled />
-                <button id="copyButton" onclick="copy()" title="Copy to Clipboard" class="btn btn-info btn-sm"
-                    style="margin-bottom: 4px; visibility: hidden;">Copy</button>
-            </div>
-            <div class="col-3"></div>
-        </div>
+    </div>
+    <div id="resultsDiv" class="col-md-6 col-md-offset-4">
+        <br />
+        <br />
+        <b>Generated Password: </b>
+        <input type="text" id="resultsText" placeholder="Click Generate button" disabled />
+        <button id="copyButton" onclick="copy()" title="Copy to Clipboard" class="btn btn-default btn-sm" style="margin-bottom: 4px; visibility: hidden;">Copy</button>
+    </div>
     </div>
 </body>
 
