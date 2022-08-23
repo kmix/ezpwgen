@@ -1,3 +1,4 @@
+/// <reference lib="es5" />
 ///<reference path="ezpwgen.ts" />
 // UI Constants
 var form_main = "mainForm";
@@ -71,4 +72,3 @@ function updateColorScheme() {
         darkModeButton.textContent = "Dark Mode";
     }
 }
-window.onload = init;
